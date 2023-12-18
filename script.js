@@ -28,13 +28,20 @@ function gridfn() {
 
 function hoverbg() {
     let child = document.querySelectorAll('.child');
-    child.forEach(function(hover){
-    hover.addEventListener('mouseover', function(){
-    let bgcolor = change();
-    hover.style.setProperty('background', bgcolor, "important");
 
-});
-});
+    child.forEach(function(hover){
+
+    	hover.addEventListener('mouseover', function(){
+    	let bgcolor = change();
+    	hover.style.setProperty('background', bgcolor, "important");
+			});
+
+			
+			hover.addEventListener('touchmove', function(){
+    	let bgcolor = change();
+    	hover.style.setProperty('background', bgcolor, "important");
+			});
+	});
 }
 
 let value = 256;
